@@ -11,7 +11,7 @@ End-to-end система для сбора, обработки данных и 
 - **ML**: Prophet, Scikit-learn
 - **Dashboard**: Streamlit
 
-## Быстрый запуск
+## Быстрый запуск по шагам от 1 до ++ делать по порядку
 
 ### 1. Предварительные требования
 - Docker & Docker Compose
@@ -25,6 +25,16 @@ pip install -r requirements.txt
 docker-compose up -d
 ```
 
-### 3. Доступы в UI
+### 3. Настроить pgAdmin для Postgres
+- В pgAdmin, перейти на http://localhost:5050 → нажать Add New Server и добавить 
+- Host postgres
+- Port 5432
+- Username airflow
+- Password airflow
+
+
+### 4. Доступы в UI
 - Airflow: http://localhost:8080 (airflow/airflow)
 - MinIO Console: http://localhost:9001 (minio/minio123)
+- pgAdmin http://localhost:5050 (admin@admin.com/admin)
+
