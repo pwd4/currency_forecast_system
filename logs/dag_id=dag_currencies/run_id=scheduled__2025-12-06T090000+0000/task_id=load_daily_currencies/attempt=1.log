@@ -11,3 +11,16 @@
 [2025-12-07T17:16:46.754+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=dag_currencies, task_id=load_daily_currencies, execution_date=20251206T090000, start_date=20251207T171645, end_date=20251207T171646
 [2025-12-07T17:16:46.781+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
 [2025-12-07T17:16:46.796+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-12-07T17:56:42.521+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_currencies.load_daily_currencies scheduled__2025-12-06T09:00:00+00:00 [queued]>
+[2025-12-07T17:56:42.527+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_currencies.load_daily_currencies scheduled__2025-12-06T09:00:00+00:00 [queued]>
+[2025-12-07T17:56:42.531+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 1
+[2025-12-07T17:56:42.545+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): load_daily_currencies> on 2025-12-06 09:00:00+00:00
+[2025-12-07T17:56:42.549+0000] {standard_task_runner.py:60} INFO - Started process 284 to run task
+[2025-12-07T17:56:42.552+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'dag_currencies', 'load_daily_currencies', 'scheduled__2025-12-06T09:00:00+00:00', '--job-id', '38', '--raw', '--subdir', 'DAGS_FOLDER/dag_currencies.py', '--cfg-path', '/tmp/tmphpwd_2sj']
+[2025-12-07T17:56:42.554+0000] {standard_task_runner.py:88} INFO - Job 38: Subtask load_daily_currencies
+[2025-12-07T17:56:42.616+0000] {task_command.py:423} INFO - Running <TaskInstance: dag_currencies.load_daily_currencies scheduled__2025-12-06T09:00:00+00:00 [running]> on host 993f81e1e02a
+[2025-12-07T17:56:42.695+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_currencies' AIRFLOW_CTX_TASK_ID='load_daily_currencies' AIRFLOW_CTX_EXECUTION_DATE='2025-12-06T09:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-12-06T09:00:00+00:00'
+[2025-12-07T17:56:43.459+0000] {python.py:201} INFO - Done. Returned value was: None
+[2025-12-07T17:56:43.467+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=dag_currencies, task_id=load_daily_currencies, execution_date=20251206T090000, start_date=20251207T175642, end_date=20251207T175643
+[2025-12-07T17:56:43.488+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-12-07T17:56:43.500+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

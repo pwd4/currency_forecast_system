@@ -20,7 +20,7 @@ def load_currencies():
 
 
 with DAG(
-    dag_id="dag_currencies",
+    dag_id="currencies_cbr.ru",
     start_date=datetime(2024, 1, 1),
     schedule_interval="0 9 * * *",
     catchup=False,

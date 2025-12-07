@@ -21,7 +21,7 @@ def load_metals():
 
 
 with DAG(
-    dag_id="metals_cbr.ru",
+    dag_id="dag_metals",
     start_date=datetime(2024, 1, 1),
     schedule_interval="0 12 * * *",
     catchup=False,
