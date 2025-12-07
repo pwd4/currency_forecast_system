@@ -23,3 +23,10 @@ git clone git@github.com:pwd4/etl.git
 cd currency_forecast_system
 pip install -r requirements.txt
 docker-compose up -d
+```
+
+### 3. Доступы в UI
+- Airflow: http://localhost:8080 (admin/admin)
+- MinIO Console: http://localhost:9001 (minioadmin/minioadmin)
+- Streamlit Dashboard: http://localhost:8501
+- PostgreSQL: localhost:5432

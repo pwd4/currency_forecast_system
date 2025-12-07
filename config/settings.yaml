@@ -1,0 +1,27 @@
+# Настройки источников данных
+data_sources:
+  cbr:
+    currency_url: "https://www.cbr.ru/scripts/XML_daily.asp"
+    metals_url: "https://www.cbr.ru/scripts/xml_metall.asp"
+  moex:
+    brent_url: "https://iss.moex.com/iss/history/engines/futures/markets/forts/securities/BRF6.json"
+
+# Настройки базы данных
+database:
+  host: "localhost"
+  port: 5432
+  name: "currency_forecast"
+  user: "forecast_user"
+  password: "forecast_password"
+
+# Настройки MinIO
+minio:
+  endpoint: "localhost:9000"
+  access_key: "minioadmin"
+  secret_key: "minioadmin"
+  bucket_name: "currency-data-lake"
+
+# Настройки приложения
+app:
+  default_currency: "USD"
+  forecast_days: 7

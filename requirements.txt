@@ -1,28 +1,20 @@
-# currency_forecast_vkr/requirements.txt
-# Зависимости для системы прогнозирования валютных курсов
-# Версия Python: 3.9+
-
 # Основные зависимости
-pandas>=2.1.0
-numpy>=1.24.0
-requests==2.31.0
-minio==7.1.14
-sqlalchemy==2.0.29
-psycopg2==2.9.9 
-python-dotenv==1.0.0
-lxml==4.9.3
+pandas>=1.5.3,<2.0.0
+numpy>=1.24.3,<1.25.0
+requests>=2.31.0,<3.0.0
+python-dotenv>=1.0.0,<2.0.0
 
-# Для дашборда
-streamlit==1.28.0
-plotly==5.17.0
-matplotlib==3.7.2
-seaborn==0.12.2
+# Базы данных
+psycopg2-binary>=2.9.7,<2.10.0
+sqlalchemy>=2.0.23,<2.1.0
 
-# Для работы с данными
-pyarrow==14.0.1
-openpyxl==3.1.2
+# Визуализация и дашборд
+streamlit>=1.28.1,<1.29.0
+plotly>=5.18.0,<5.19.0
 
-# Дополнительные утилиты
-tqdm==4.66.1
-python-dateutil==2.8.2
-pytz==2023.3
+# Для работы с API ЦБ
+xmltodict>=0.13.0,<0.14.0
+
+# Утилиты
+pydantic>=2.5.0,<2.6.0
+loguru>=0.7.2,<0.8.0

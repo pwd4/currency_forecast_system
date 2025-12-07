@@ -1,0 +1,15 @@
+FROM python:3.11-slim
+
+WORKDIR /app
+
+# Копируем requirements для кэширования
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Копируем исходный код
+COPY src/visualization ./visualization
+COPY config ./config
+
+EXPOSE 8501
+
+CMD ["streamlit", "run", "visualization/app.py", "--server.port=8501", "--server.address=0.0.0.0"]
