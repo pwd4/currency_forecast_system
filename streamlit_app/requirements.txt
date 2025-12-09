@@ -3,3 +3,5 @@ pandas
 plotly
 sqlalchemy
 psycopg2-binary
+scikit-learn
+xlsxwriter>=3.0,<4.0
