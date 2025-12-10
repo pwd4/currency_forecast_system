@@ -38,3 +38,10 @@ docker-compose up -d
 - MinIO Console: http://localhost:9001 (minio/minio123)
 - pgAdmin http://localhost:5050 (admin@admin.com/admin)
 - Dashboard Streamlit http://localhost:8501/
+
+
+### 5. Чтобы работать с проектом, нужно запускать DAG's
+- stage_1 - сбор исторических данных в MinIO (где-то 1 час работает сбор)
+- stage_2 - DAG from MinIO to vault
+- stage_3 - DAG from vault to mart
+- service_reset_vault_and_mart - этот DAG делает CASCADE DROP vault/mart
