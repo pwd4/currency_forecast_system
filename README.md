@@ -40,8 +40,14 @@ docker-compose up -d
 - Dashboard Streamlit http://localhost:8501/
 
 
-### 5. Чтобы работать с проектом, нужно запускать DAG's
+### 5. Внимание! До запуска DAG's в Streamlit будет ошибка из-за отсутствия данных в БД
+
+
+### 6. Чтобы работать с проектом, нужно запускать DAG's в Airflow
 - stage_1 - сбор исторических данных в MinIO (где-то 1 час работает сбор)
 - stage_2 - DAG from MinIO to vault
 - stage_3 - DAG from vault to mart
 - service_reset_vault_and_mart - этот DAG делает CASCADE DROP vault/mart
+
+
+### 7. Войти в UI Streamlit и использовать сервис
